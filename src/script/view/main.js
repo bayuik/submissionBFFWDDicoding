@@ -1,0 +1,1 @@
+import '../component/pokemon-item.js'
