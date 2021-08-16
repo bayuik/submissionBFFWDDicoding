@@ -5,7 +5,7 @@
   "main": "webpack.common.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.pr"
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "bayuik",
   "license": "ISC",
