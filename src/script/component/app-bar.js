@@ -5,9 +5,14 @@ class AppBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <nav class="navbar navbar-dark bg-dark">
+    <style>
+      nav {
+        background-color: #FF005C;
+      }
+    </style>
+    <nav class="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <h1 class="m-auto text-white">Pokemon</h1>
       </div>
     </nav>`;
   }

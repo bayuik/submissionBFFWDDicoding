@@ -1,18 +1,17 @@
 import "../component/pokemon-list.js";
-import DataSource from "../data/data-source.js";
+const axios = require("axios");
 
 const main = () => {
   const pokemonListElement = document.querySelector("pokemon-list");
-
-  fetch(`https://pokeapi.co/api/v2/pokemon/`)
+  return axios
+    .get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=60`)
     .then((response) => {
       if (response.status != 200) {
         alert(`Ooops ${response.status}`);
         return;
       }
-      response.json().then((data) => {
-        pokemonListElement.pokemons = data;
-      });
+      let data = response.data;
+      pokemonListElement.pokemons = data;
     })
     .catch((reject) => {
       pokemonListElement.pokemons(reject);
